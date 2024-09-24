@@ -20,6 +20,8 @@ buttons.forEach(function (button) {
         }
     })
 })
+
+// add character
 function appendCharacter(character) {
     if (input.value === "0" || input.value === "Error") {
         input.value = character;
@@ -27,9 +29,13 @@ function appendCharacter(character) {
         input.value += character;
     }
 }
+
+// clean the display
 function clearDisplay(){
     input.value = "0";
 }
+
+// delete the last item
 function deleteLast(){
     if(input.value.length>1){
         input.value = input.value.slice(0,-1);
@@ -37,6 +43,8 @@ function deleteLast(){
         input.value = "0";
     }
 }
+
+// result 
 function result(){
-    
+    input.value = eval(input.value);
 }
